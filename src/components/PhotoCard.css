@@ -1,0 +1,17 @@
+.photo-card {
+    width: 100%; /* Adjust as needed */
+    margin-bottom: 20px; /* Spacing between cards */
+  }
+  
+  .photo-card img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any inline spacing */
+  }
+  
+  .photo-card .caption {
+    text-align: center; /* Center the caption text */
+    font-weight: bold; /* Make the caption bold */
+    padding: 10px 0; /* Spacing around the text */
+  }
+  

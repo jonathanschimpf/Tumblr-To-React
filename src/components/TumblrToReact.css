@@ -1,0 +1,11 @@
+.infinite-scroll-container {
+    max-width: 90vw;
+    margin: auto;
+  }
+  
+  .end-message {
+    text-align: center;
+    padding: 20px 0;
+    font-weight: bold;
+  }
+  
