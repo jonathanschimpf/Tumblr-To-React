@@ -2,13 +2,18 @@
   text-align: center;
 }
 
-.titleMyName {
-  font-weight: bolder;
-  font-size: 60px;
+* {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
-@media (max-width: 600px) {
+.titleMyName {
+  font-weight: bolder;
+  font-size: 90px;
+  margin-top: 1rem;
+}
+
+@media (max-width: 1000px) {
   .titleMyName {
-    font-size: 9.75vw;
+    font-size: 9vw;
   }
 }

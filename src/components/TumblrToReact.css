@@ -1,11 +1,82 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.90);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; 
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  background: white;
+  z-index: 1001; 
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 70vh; 
+  display: block; 
+  margin: 0 auto; /* Center the image */
+}
+
+.modal-content p {
+  margin-top: 10px; /* Space between image and caption */
+  text-align: center; /* Center the caption text */
+}
+
+.modal-content button {
+  position: absolute;
+  top: -4px; 
+  right: -4px; 
+  padding: 0;
+  background: none; 
+  color: #000; 
+  border: none;
+  cursor: pointer;
+  font-size: 20px; 
+  line-height: 1; 
+  font-weight: bold; 
+  width: 29px; 
+  height: 29px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10; 
+}
+
+
+.modal-content button:hover {
+  color: #686868; 
+}
+
+.modal-content button:active {
+  color: #acacac; 
+}
+
+
 .infinite-scroll-container {
-    max-width: 90vw;
-    margin: auto;
+  max-width: 90vw;
+  margin: auto; 
+}
+
+.end-message {
+  text-align: center;
+  padding: 20px 0;
+  font-weight: bold;
+}
+
+
+@media (max-width: 600px) {
+  p.end-message {
+    font-size: 11.5px;
   }
-  
-  .end-message {
-    text-align: center;
-    padding: 20px 0;
-    font-weight: bold;
-  }
-  
+}
