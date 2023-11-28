@@ -1,5 +1,5 @@
 .photo-card {
-  max-width: 900px; /* Adjust as needed */
+  max-width: 475px; 
   margin-bottom: 20px; /* Spacing between cards */
   margin-left: auto; /* Center the card */
   margin-right: auto; /* Center the card */
@@ -28,7 +28,7 @@
 
 @media (max-width: 600px) {
   .photo-card img {
-    width: 90vw;
+    width: 79.3vw;
   }
 }
 
