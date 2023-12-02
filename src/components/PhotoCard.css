@@ -1,34 +1,28 @@
 .photo-card {
   max-width: 600px; 
-  margin-bottom: 20px; /* Spacing between cards */
-  margin-left: auto; /* Center the card */
-  margin-right: auto; /* Center the card */
+  margin: auto; /* Center the card */
   margin-bottom: 10em;
 }
 
 .photo-card img {
   width: 100%; /* Make the image responsive */
   height: auto; /* Maintain aspect ratio */
+  cursor: pointer; /* Change cursor to pointer when hovering over the image */
 }
 
 .photo-card .caption {
   font-size: 15px;
-  text-align: center; /* Center the caption text */
+  text-align: center;
   font-weight: 500;
-  padding: 8px 0; /* Spacing around the text */
+  padding: 8px 0;
 }
-
-
 
 @media (max-width: 600px) {
   .photo-card .caption {
     font-size: 12.5px;
   }
-}
 
-@media (max-width: 600px) {
   .photo-card img {
     width: 89.9vw;
   }
 }
-

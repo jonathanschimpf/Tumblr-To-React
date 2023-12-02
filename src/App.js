@@ -1,5 +1,6 @@
 import "./App.css";
 import React, { useRef } from "react";
+import 'animate.css';
 import HeaderQuickConnects from "./components/HeaderQuickConnects";
 import TumblrToReact from "./components/TumblrToReact";
 import NavigationIcons_Header from "./components/NavigationIcons_Header";

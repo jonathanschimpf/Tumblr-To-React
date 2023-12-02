@@ -1,4 +1,5 @@
 # TEMPORARY WORKAROUND // THIS IS ALREADY ON THE REPO ! (Ignore the images directory)
+# BUT ALTER WHEN ADDING NEW DIRECTORIES SO THAT IT TARGETS _1, _2, _3, & _4 DIRECTORIES
 src/images/
 
 # dependencies
