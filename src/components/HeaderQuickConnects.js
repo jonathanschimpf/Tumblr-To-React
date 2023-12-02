@@ -21,7 +21,7 @@ function HeaderQuickConnects () {
               delay={{ show: 60, hide: 60 }}
               overlay={<Tooltip className="tooltip-inner-quickconnects">LinkedIn</Tooltip>}
             >
-            <div className="m-3 divquickconnects wow animate__animated animate__fadeIn animate__slow">
+            <div className="m-3 divquickconnects">
               <a
                 href="https://www.linkedin.com/in/jonathan-schimpf/"
                 rel="noreferrer"
@@ -40,7 +40,7 @@ function HeaderQuickConnects () {
               delay={{ show: 60, hide: 60 }}
               overlay={<Tooltip className="tooltip-inner-quickconnects">GitHub</Tooltip>}
             >
-            <div className="m-3 divquickconnects wow animate__animated animate__fadeIn animate__slow">
+            <div className="m-3 divquickconnects">
               <a
                 href="https://github.com/jonathanschimpf"
                 rel="noreferrer"
@@ -59,7 +59,7 @@ function HeaderQuickConnects () {
               delay={{ show: 60, hide: 60 }}
               overlay={<Tooltip className="tooltip-inner-quickconnects">Instagram</Tooltip>}
             >
-            <div className="m-3 divquickconnects wow animate__animated animate__fadeIn animate__slow">
+            <div className="m-3 divquickconnects">
               <a
                 href="https://www.instagram.com/schimpfstagram/"
                 rel="noreferrer"
@@ -78,7 +78,7 @@ function HeaderQuickConnects () {
               delay={{ show: 60, hide: 60 }}
               overlay={<Tooltip className="tooltip-inner-quickconnects">Threads</Tooltip>}
             >
-            <div className="m-3 divquickconnects wow animate__animated animate__fadeIn animate__slow">
+            <div className="m-3 divquickconnects">
               <a
                 href="https://www.threads.net/@schimpfstagram"
                 rel="noreferrer"

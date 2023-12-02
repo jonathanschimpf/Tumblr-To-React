@@ -6,6 +6,11 @@
   margin-top: 1rem;
 }
 
+.wow {
+  visibility: hidden;
+}
+
+
 .responsiveNavigationIcon  {
     display: inline-block;
     margin: 0 5px;

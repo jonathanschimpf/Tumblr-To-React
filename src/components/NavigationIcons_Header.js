@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShuffle, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { Tooltip, OverlayTrigger } from "react-bootstrap";
 
+
 const NavigationIcons_Header = ({ onRandomSelect, onGoToBottom }) => {
   return (
     <div className="navigation-icons-header">
@@ -17,7 +18,7 @@ const NavigationIcons_Header = ({ onRandomSelect, onGoToBottom }) => {
           icon={faArrowDown}
           onClick={onGoToBottom}
           size="2x"
-          className="responsiveNavigationIcon"
+          className="responsiveNavigationIcon "
           style={{ cursor: "pointer" }}
         />
       </OverlayTrigger>
