@@ -4,7 +4,7 @@
 ![License](https://img.shields.io/static/v1?label=Language&message=JavaScript&color=yellow)
 ![License](https://img.shields.io/static/v1?label=Library&message=React.js&color=pink) 
 ![License](https://img.shields.io/static/v1?label=Language&message=HTML5&color=orange) ![License](https://img.shields.io/static/v1?label=Language&message=CSS3&color=blue) ![License](https://img.shields.io/static/v1?label=Framework&message=React-Bootstrap&color=green) 
-
+![License](https://img.shields.io/static/v1?label=Language&message=Python&color=yellow)
 
 <p>&nbsp;<p>
 
