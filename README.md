@@ -18,7 +18,7 @@
 
 <p>&nbsp;<p>
 
-Data is stored in a .JSON file which has an array of objects that represent each image+caption. The data for each image+caption is dynamically generated to a single card component. After casually using Tumblr specifically to post my personal photographs and nothing else since 2010, I got to thinking, "Why not make this a React App project?".. So I exported all of my Photo Journal media and rebuilt it in a React setting. Writing Python scripts made extracting the captions possible. I used Infinite scroll to avoid pagination when a user is traveling back in time. I have written logic for "Header" and "Footer" Navigation icons, to make navigating around an old Photo Blog easier. 
+Data is stored in a .JSON file which has an array of objects that represent each image+caption. The data for each image+caption is dynamically generated to a single card component. After casually using Tumblr specifically to post my personal photographs and nothing else since 2010, I got to thinking, "Why not make this a React App project?".. So I exported all of my Photo Journal media and rebuilt it in a React setting. Writing Python scripts made extracting the captions possible. I used Infinite scroll to avoid pagination when a user is traveling back in time. I have written logic for "Header" and "Footer" Navigation icons, to make it easier for anyone navigating around an old Photo Blog. 
 
 <p>&nbsp;<p>
 
