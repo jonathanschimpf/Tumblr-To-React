@@ -60,7 +60,7 @@ function TumblrToReact({ data, itemRefs }) {
               caption={item.caption} 
               onClick={() => handleImageClick(item.image, item.caption)}
             />
-            {index >= 5 && index < data.length - 1 && (
+            {index >= 2 && index < data.length - 1 && (
               <GeneralNavigationIcon action={handleNavigationClick} />
             )}
           </div>

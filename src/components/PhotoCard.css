@@ -1,6 +1,7 @@
 .photo-card {
-  max-width: 600px; 
+  max-width: 600px;
   margin: auto; /* Center the card */
+  padding-top: 5em;
   margin-bottom: 10em;
 }
 
