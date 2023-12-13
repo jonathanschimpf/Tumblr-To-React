@@ -1,4 +1,4 @@
-# From Tumblr > To > A React App
+# From A Tumblr Account To A React App
 
 <p>&nbsp;<p>
 
