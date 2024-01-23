@@ -13,7 +13,7 @@ const GeneralNavigationIcon = ({ action }) => {
   return (
     <div className="general-navigation-icon-div wow animate__delay-5s animate__fadeIn animate__slower" data-wow-offset="100">
       <FontAwesomeIcon className="general-navigation-icon " 
-       onClick={handleClick}size="2x" icon={faChevronUp} />
+       onClick={handleClick}size="3x" icon={faChevronUp} />
     </div>
   );
 };
