@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { WOW } from 'wowjs';
 import 'animate.css';
 import HeaderQuickConnects from "./components/HeaderQuickConnects";
@@ -8,43 +8,50 @@ import NavigationIcons_Header from "./components/NavigationIcons_Header";
 import FromTumblrToReact_HeaderImage from "./FromTumblrToReact_Header-Image/FromTumblrToReact_Header-Image";
 import NavigationIcons_Footer from "./components/NavigationIcons_Footer";
 
-
 function App() {
-  // Import data
-  const data = require("./captions-and-images.json");
-  const itemRefs = useRef(data.map(() => React.createRef()));
+  const [data, setData] = useState(require("./captions-and-images.json"));
+  const [itemRefs, setItemRefs] = useState([]);
 
   useEffect(() => {
-    new WOW().init();
-  }, []);
+    setItemRefs(data.map(() => React.createRef()));
 
-  // Function to scroll to the first item
+    const wow = new WOW({
+      live: false
+    });
+    wow.init();
+
+    // Return a cleanup function
+    return () => wow.sync();
+  }, [data]);
+
   const scrollToTop = () => {
-    itemRefs.current[0].current.scrollIntoView({ behavior: "smooth" });
+    if (itemRefs[0]?.current) {
+      itemRefs[0].current.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
-  // Function to scroll to the last item
   const scrollToBottom = () => {
-    const lastItemIndex = itemRefs.current.length - 1;
-    itemRefs.current[lastItemIndex].current.scrollIntoView({ behavior: "smooth" });
+    const lastItemIndex = itemRefs.length - 1;
+    if (itemRefs[lastItemIndex]?.current) {
+      itemRefs[lastItemIndex].current.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
-  // Function to scroll to a random item
   const scrollToRandom = () => {
-    const randomIndex = Math.floor(Math.random() * itemRefs.current.length);
-    itemRefs.current[randomIndex].current.scrollIntoView({ behavior: "smooth" });
+    const randomIndex = Math.floor(Math.random() * itemRefs.length);
+    if (itemRefs[randomIndex]?.current) {
+      itemRefs[randomIndex].current.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
     <div className="App">
-      <div className="wow animate__fadeIn animate__animated animate__slower">
       <HeaderQuickConnects />
       <NavigationIcons_Header onGoToBottom={scrollToBottom} onRandomSelect={scrollToRandom} />
       <FromTumblrToReact_HeaderImage />
       <p className="titleMyName">Jonathan Schimpf</p>
-      <TumblrToReact data={data} itemRefs={itemRefs} /> {/* Pass data here */}
+      <TumblrToReact data={data} itemRefs={itemRefs} />
       <NavigationIcons_Footer onGoToTop={scrollToTop} onRandomSelect={scrollToRandom} />
-      </div>
     </div>
   );
 }

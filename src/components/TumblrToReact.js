@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import PhotoCard from "./PhotoCard";
-import GeneralNavigationIcon from "./GeneralNavigationIcon";
 import "./TumblrToReact.css";
-import { WOW } from 'wowjs';
-import 'animate.css';
+import { WOW } from "wowjs";
+import "animate.css";
 
 function Modal({ image, caption, onClose }) {
   if (!image) return null;
 
   return (
     <div className="modal-backdrop" onClick={onClose}>
-      <div className="modal-content" onClick={e => e.stopPropagation()}>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <img src={image} alt={caption} />
         <p>{caption}</p>
         <button onClick={onClose}>x</button>
@@ -26,7 +25,7 @@ function TumblrToReact({ data, itemRefs }) {
 
   useEffect(() => {
     const wow = new WOW({
-      live: false // to prevent WOW from continuously checking for new elements on the page
+      live: false, // PREVENT WOW FROM CONTINUOUSLYCHECKING FOR NEW ELEMENT
     });
     wow.init();
   }, []);
@@ -41,32 +40,31 @@ function TumblrToReact({ data, itemRefs }) {
     setSelectedCaption("");
   };
 
-  const handleNavigationClick = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
     <>
       <InfiniteScroll
         className="infinite-scroll-container"
-        dataLength={itemRefs.current.length}
+        dataLength={data.length}
         next={() => {}}
         hasMore={false}
+        loader={<h4>Loading...</h4>}
       >
         {data.map((item, index) => (
-          <div ref={itemRefs.current[index]} key={index}>
-            <PhotoCard 
-              image={item.image} 
-              caption={item.caption} 
-              onClick={() => handleImageClick(item.image, item.caption)}
-            />
-            {index >= 2 && index < data.length - 1 && (
-              <GeneralNavigationIcon action={handleNavigationClick} />
-            )}
-          </div>
+          <PhotoCard
+            key={item.id} // Use a unique identifier from your data as the key
+            ref={itemRefs[index]} // Assign the ref here
+            image={item.image}
+            caption={item.caption}
+            onClick={() => handleImageClick(item.image, item.caption)}
+            index={index} // PASS THE INDEX TO NOTE WHAT # PHOTO IT IS
+          />
         ))}
       </InfiniteScroll>
-      <Modal image={selectedImage} caption={selectedCaption} onClose={handleCloseModal} />
+      <Modal
+        image={selectedImage}
+        caption={selectedCaption}
+        onClose={handleCloseModal}
+      />
     </>
   );
 }
