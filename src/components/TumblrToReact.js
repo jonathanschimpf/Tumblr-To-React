@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import PhotoCard from "./PhotoCard";
 import "./TumblrToReact.css";
-import { WOW } from "wowjs";
 import "animate.css";
 
 function Modal({ image, caption, onClose }) {
@@ -22,13 +21,6 @@ function Modal({ image, caption, onClose }) {
 function TumblrToReact({ data, itemRefs }) {
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedCaption, setSelectedCaption] = useState("");
-
-  useEffect(() => {
-    const wow = new WOW({
-      live: false, // PREVENT WOW FROM CONTINUOUSLYCHECKING FOR NEW ELEMENT
-    });
-    wow.init();
-  }, []);
 
   const handleImageClick = (image, caption) => {
     setSelectedImage(image);
@@ -51,7 +43,7 @@ function TumblrToReact({ data, itemRefs }) {
       >
         {data.map((item, index) => (
           <PhotoCard
-            key={item.id} // Use a unique identifier from your data as the key
+            key={`${item.image}-${index}`}
             ref={itemRefs[index]} // Assign the ref here
             image={item.image}
             caption={item.caption}

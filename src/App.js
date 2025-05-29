@@ -1,7 +1,6 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
-import { WOW } from 'wowjs';
-import 'animate.css';
+import "animate.css";
 import HeaderQuickConnects from "./components/HeaderQuickConnects";
 import TumblrToReact from "./components/TumblrToReact";
 import NavigationIcons_Header from "./components/NavigationIcons_Header";
@@ -14,14 +13,6 @@ function App() {
 
   useEffect(() => {
     setItemRefs(data.map(() => React.createRef()));
-
-    const wow = new WOW({
-      live: false
-    });
-    wow.init();
-
-    // Return a cleanup function
-    return () => wow.sync();
   }, [data]);
 
   const scrollToTop = () => {
@@ -47,11 +38,17 @@ function App() {
   return (
     <div className="App">
       <HeaderQuickConnects />
-      <NavigationIcons_Header onGoToBottom={scrollToBottom} onRandomSelect={scrollToRandom} />
+      <NavigationIcons_Header
+        onGoToBottom={scrollToBottom}
+        onRandomSelect={scrollToRandom}
+      />
       <FromTumblrToReact_HeaderImage />
       <p className="titleMyName">Jonathan Schimpf</p>
       <TumblrToReact data={data} itemRefs={itemRefs} />
-      <NavigationIcons_Footer onGoToTop={scrollToTop} onRandomSelect={scrollToRandom} />
+      <NavigationIcons_Footer
+        onGoToTop={scrollToTop}
+        onRandomSelect={scrollToRandom}
+      />
     </div>
   );
 }
