@@ -4,7 +4,7 @@ import "animate.css";
 import HeaderQuickConnects from "./components/HeaderQuickConnects";
 import TumblrToReact from "./components/TumblrToReact";
 import NavigationIconsHeader from "./components/NavigationIconsHeader";
-import FromTumblrToReactHeaderImage from "./FromTumblrToReact_Header-Image/FromTumblrToReactHeader-Image";
+import FromTumblrToReactHeaderImg from "./FromTumblrToReactHeaderImg/FromTumblrToReactHeaderImg";
 import NavigationIconsFooter from "./components/NavigationIconsFooter";
 
 function App() {
@@ -47,7 +47,7 @@ function App() {
         onGoToBottom={scrollToBottom}
         onRandomSelect={scrollToRandom}
       />
-      <FromTumblrToReactHeaderImage />
+      <FromTumblrToReactHeaderImg />
       <p className="titleMyName">Jonathan Schimpf</p>
       <TumblrToReact data={data} itemRefs={itemRefs} />
       <NavigationIconsFooter
