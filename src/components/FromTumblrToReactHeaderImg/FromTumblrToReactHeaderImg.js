@@ -1,10 +1,10 @@
 import React from "react";
-import "./FromTumblrToReactHeaderImage.css";
+import "./FromTumblrToReactHeaderImg.css";
 import localImage from "../FromTumblrToReactOpenGraphImage/FromTumblrToReact.png";
 
-function FromTumblrToReactHeaderImage() {
+function FromTumblrToReactHeaderImg() {
   return (
-    <div className="FromTumblrToReactHeaderImageDiv">
+    <div className="FromTumblrToReactHeaderImgDiv">
       <a
         href="https://github.com/jonathanschimpf/Tumblr-To-React"
         target="_blank"
@@ -20,4 +20,4 @@ function FromTumblrToReactHeaderImage() {
   );
 }
 
-export default FromTumblrToReactHeaderImage;
+export default FromTumblrToReactHeaderImg;
