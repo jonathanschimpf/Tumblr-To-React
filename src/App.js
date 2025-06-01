@@ -4,7 +4,7 @@ import "animate.css";
 import HeaderQuickConnects from "./components/HeaderQuickConnects";
 import TumblrToReact from "./components/TumblrToReact";
 import NavigationIconsHeader from "./components/NavigationIconsHeader";
-import FromTumblrToReactHeaderImg from "./FromTumblrToReactHeaderImg/FromTumblrToReactHeaderImg";
+import FromTumblrToReactHeaderImg from "./components/FromTumblrToReactHeaderImg/FromTumblrToReactHeaderImg";
 import NavigationIconsFooter from "./components/NavigationIconsFooter";
 
 function App() {
