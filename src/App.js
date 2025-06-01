@@ -3,9 +3,9 @@ import React, { useState, useEffect } from "react";
 import "animate.css";
 import HeaderQuickConnects from "./components/HeaderQuickConnects";
 import TumblrToReact from "./components/TumblrToReact";
-import NavigationIcons_Header from "./components/NavigationIcons_Header";
+import NavigationIcons_Header from "./components/NavigationIconsHeader";
 import FromTumblrToReact_HeaderImage from "./FromTumblrToReact_Header-Image/FromTumblrToReact_Header-Image";
-import NavigationIcons_Footer from "./components/NavigationIcons_Footer";
+import NavigationIconsFooter from "./components/NavigationIconsFooter";
 
 function App() {
   const [data, setData] = useState([]);
