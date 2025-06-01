@@ -1,6 +1,6 @@
 <p>&nbsp;</p>
 
-[From A Tumblr Account To A React App](https://jonathanschimpf.com/)
+# [From A Tumblr Account To A React App](https://jonathanschimpf.com/)
 
 <p>&nbsp;</p>
 
@@ -66,13 +66,14 @@ Photo journal rebuilt from Tumblr → React (2010–2023+)
 
 <p>&nbsp;</p>
 
-<img src="public/images/READMEPreview.png" alt="Project Preview" width="100%"/>
+<img src="public/images/READMEPreview.png" alt="Project Preview" width="500" />
 
 <p>&nbsp;</p>
 
 <p>&nbsp;</p>
 
-✍️ README co-authored by a GPT  
+## ✍️ README co-authored by a GPT
+
 ✨ A GPT helped write this README — because it’s 2025.
 
 <p>&nbsp;</p>
