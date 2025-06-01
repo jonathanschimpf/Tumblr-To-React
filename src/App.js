@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import "animate.css";
 import HeaderQuickConnects from "./components/HeaderQuickConnects";
 import TumblrToReact from "./components/TumblrToReact";
-import NavigationIcons_Header from "./components/NavigationIconsHeader";
+import NavigationIconsHeader from "./components/NavigationIconsHeader";
 import FromTumblrToReact_HeaderImage from "./FromTumblrToReact_Header-Image/FromTumblrToReact_Header-Image";
 import NavigationIconsFooter from "./components/NavigationIconsFooter";
 
@@ -43,14 +43,14 @@ function App() {
   return (
     <div className="App">
       <HeaderQuickConnects />
-      <NavigationIcons_Header
+      <NavigationIconsHeader
         onGoToBottom={scrollToBottom}
         onRandomSelect={scrollToRandom}
       />
       <FromTumblrToReact_HeaderImage />
       <p className="titleMyName">Jonathan Schimpf</p>
       <TumblrToReact data={data} itemRefs={itemRefs} />
-      <NavigationIcons_Footer
+      <NavigationIconsFooter
         onGoToTop={scrollToTop}
         onRandomSelect={scrollToRandom}
       />
