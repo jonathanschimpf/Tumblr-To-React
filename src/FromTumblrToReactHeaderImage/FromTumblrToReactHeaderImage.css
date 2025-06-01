@@ -1,12 +1,11 @@
-div.FromTumblrToReact_Header-ImageDiv {
-    max-width: 350px; 
-    margin: auto; /* Center the image */
-    margin-bottom: 1em;
-}
-  
-.FromTumblrToReact_Header-img {
-    width: 80%; /*Image responsive */
-    height: auto; /* Maintain aspect ratio */
-    margin-top: 5em;
+div.FromTumblrToReactHeaderImageDiv {
+  max-width: 350px;
+  margin: auto; /* Center the image */
+  margin-bottom: 1em;
 }
 
+.FromTumblrToReactHeaderImg {
+  width: 80%; /*Image responsive */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 5em;
+}
