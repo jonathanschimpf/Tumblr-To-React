@@ -1,45 +1,56 @@
 import "./App.css";
-import React, { useState, useEffect, createRef } from "react";
+import React, { useState, useEffect } from "react";
 import "animate.css";
 import HeaderQuickConnects from "./components/HeaderQuickConnects";
-import NavigationIconsHeader from "./components/NavigationIcons_Header";
-import NavigationIconsFooter from "./components/NavigationIcons_Footer";
-import FromTumblrToReactHeaderImage from "./FromTumblrToReact_Header-Image/FromTumblrToReact_Header-Image";
 import TumblrToReact from "./components/TumblrToReact";
+import NavigationIcons_Header from "./components/NavigationIcons_Header";
+import FromTumblrToReact_HeaderImage from "./FromTumblrToReact_Header-Image/FromTumblrToReact_Header-Image";
+import NavigationIcons_Footer from "./components/NavigationIcons_Footer";
 
 function App() {
-  const [data] = useState(require("./captions-and-images.json"));
+  const [data, setData] = useState([]);
   const [itemRefs, setItemRefs] = useState([]);
 
   useEffect(() => {
-    setItemRefs(data.map(() => createRef()));
-  }, [data]);
+    fetch("/captions-and-images.json")
+      .then((res) => res.json())
+      .then((json) => {
+        setData(json);
+        setItemRefs(json.map(() => React.createRef()));
+      });
+  }, []);
 
   const scrollToTop = () => {
-    itemRefs[0]?.current?.scrollIntoView({ behavior: "smooth" });
+    if (itemRefs[0]?.current) {
+      itemRefs[0].current.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const scrollToBottom = () => {
-    const lastRef = itemRefs[itemRefs.length - 1];
-    lastRef?.current?.scrollIntoView({ behavior: "smooth" });
+    const lastItemIndex = itemRefs.length - 1;
+    if (itemRefs[lastItemIndex]?.current) {
+      itemRefs[lastItemIndex].current.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const scrollToRandom = () => {
     const randomIndex = Math.floor(Math.random() * itemRefs.length);
-    itemRefs[randomIndex]?.current?.scrollIntoView({ behavior: "smooth" });
+    if (itemRefs[randomIndex]?.current) {
+      itemRefs[randomIndex].current.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
     <div className="App">
       <HeaderQuickConnects />
-      <NavigationIconsHeader
+      <NavigationIcons_Header
         onGoToBottom={scrollToBottom}
         onRandomSelect={scrollToRandom}
       />
-      <FromTumblrToReactHeaderImage />
+      <FromTumblrToReact_HeaderImage />
       <p className="titleMyName">Jonathan Schimpf</p>
       <TumblrToReact data={data} itemRefs={itemRefs} />
-      <NavigationIconsFooter
+      <NavigationIcons_Footer
         onGoToTop={scrollToTop}
         onRandomSelect={scrollToRandom}
       />

@@ -1,10 +1,10 @@
-import React, { useState, forwardRef } from 'react';
-import './PhotoCard.css';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useState, forwardRef } from "react";
+import "./PhotoCard.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
-import 'animate.css';
+import "animate.css";
 
 // Make sure the component function is properly closed with a brace.
 const PhotoCard = forwardRef(({ image, caption, onClick, index }, ref) => {
@@ -16,8 +16,10 @@ const PhotoCard = forwardRef(({ image, caption, onClick, index }, ref) => {
 
   const scrollToTop = (event) => {
     event.stopPropagation();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  console.log("Rendering PhotoCard image:", image);
 
   // Your return statement and JSX go here.
   return (
@@ -32,7 +34,12 @@ const PhotoCard = forwardRef(({ image, caption, onClick, index }, ref) => {
         {isLoaded && <p className="caption">{caption}</p>}
         {isLoaded && index >= 4 && (
           <div className="general-navigation-icon-div">
-            <FontAwesomeIcon size="2x" className="general-navigation-icon" onClick={scrollToTop} icon={faChevronUp} />
+            <FontAwesomeIcon
+              size="2x"
+              className="general-navigation-icon"
+              onClick={scrollToTop}
+              icon={faChevronUp}
+            />
           </div>
         )}
       </div>
