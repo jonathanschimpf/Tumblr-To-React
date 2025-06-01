@@ -65,8 +65,9 @@ Shoot me an email → [jonathan@jonathanschimpf.com](mailto:jonathan@jonathansch
 Photo journal rebuilt from Tumblr → React (2010–2023+)
 
 <p>&nbsp;</p>
-
+<p align="center">
 <img src="public/images/READMEPreview.png" alt="Project Preview" width="500" />
+</p>
 
 <p>&nbsp;</p>
 
