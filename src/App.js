@@ -12,11 +12,19 @@ function App() {
   const [itemRefs, setItemRefs] = useState([]);
 
   useEffect(() => {
-    fetch("/captions-and-images.json")
+    const timestamp = new Date().getTime();
+    const jsonPath = `/captions-and-images.json?t=${timestamp}`;
+    console.log("📸 Fetching JSON from:", jsonPath);
+
+    fetch(jsonPath)
       .then((res) => res.json())
       .then((json) => {
+        console.log("✅ JSON loaded, entries:", json.length);
         setData(json);
         setItemRefs(json.map(() => React.createRef()));
+      })
+      .catch((err) => {
+        console.error("❌ Failed to load JSON:", err);
       });
   }, []);
 
