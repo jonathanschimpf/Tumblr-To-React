@@ -13,15 +13,6 @@
 
 <p>&nbsp;</p>
 
-📸 **Preview**  
-Photo journal rebuilt from Tumblr → React (2010–2023+)
-
-<p>&nbsp;</p>
-
-<img src="public/images/READMEPreview.png" alt="Project Preview" width="100%"/>
-
-<p>&nbsp;</p>
-
 ---
 
 <p>&nbsp;</p>
@@ -69,6 +60,15 @@ Shoot me an email → [jonathan@jonathanschimpf.com](mailto:jonathan@jonathansch
 <p>&nbsp;</p>
 
 ---
+
+📸 **Preview**  
+Photo journal rebuilt from Tumblr → React (2010–2023+)
+
+<p>&nbsp;</p>
+
+<img src="public/images/READMEPreview.png" alt="Project Preview" width="100%"/>
+
+<p>&nbsp;</p>
 
 <p>&nbsp;</p>
 
