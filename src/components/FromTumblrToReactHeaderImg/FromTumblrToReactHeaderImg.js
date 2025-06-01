@@ -1,6 +1,6 @@
 import React from "react";
 import "./FromTumblrToReactHeaderImg.css";
-import localImage from "../FromTumblrToReactOpenGraphImage/FromTumblrToReact.png";
+import localImage from "../FromTumblrToReactOpenGraphImg/FromTumblrToReact.png";
 
 function FromTumblrToReactHeaderImg() {
   return (
