@@ -1,6 +1,6 @@
 <p>&nbsp;</p>
 
-# [From A Tumblr Account To A React App](https://jonathanschimpf.com/)
+# [From a Tumblr Account to a React App](https://jonathanschimpf.com/)
 
 <p>&nbsp;</p>
 
