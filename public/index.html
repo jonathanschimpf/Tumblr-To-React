@@ -1,30 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <!-- TUMBLR TO A REACT APP OPEN GRAPH IMAGE (2010 > 2023+) -->
+    <meta charset="UTF-8" />
+
+    <!-- ✅ OPEN GRAPH & TWITTER META -->
     <meta property="og:title" content="From A Tumblr Account To A React App" />
     <meta
       property="og:description"
       content="My personal Tumblr photo journal (dating back to 2010) exported/extracted & built in a modern React setting."
     />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://jonathanschimpf.com/" />
     <meta
       property="og:image"
-      content="https://jonathanschimpf.com/FromTumblrToReactOpenGraph.png"
+      content="https://jonathanschimpf.com/FromTumblrToReactOpenGraph.jpg"
     />
     <meta
       property="og:image:secure_url"
-      content="https://jonathanschimpf.com/FromTumblrToReactOpenGraph.png"
+      content="https://jonathanschimpf.com/FromTumblrToReactOpenGraph.jpg"
     />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jonathanschimpf.com/" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="From A Tumblr Account To A React App" />
     <meta
-      name="description"
+      name="twitter:description"
       content="My personal Tumblr photo journal (dating back to 2010) exported/extracted & built in a modern React setting."
     />
+    <meta
+      name="twitter:image"
+      content="https://jonathanschimpf.com/FromTumblrToReactOpenGraph.jpg"
+    />
+
+    <title>From A Tumblr Account To A React App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- animate.css -->
     <link
@@ -32,13 +40,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
 
-    <!-- MY Favicon -->
+    <!-- FAVICONS -->
     <link
       rel="shortcut icon"
       href="%PUBLIC_URL%/favicon/favicon.ico"
       type="image/x-icon"
     />
-
     <link
       rel="apple-touch-icon-precomposed"
       sizes="57x57"
@@ -110,12 +117,18 @@
       sizes="128x128"
     />
 
-    <title>From A Tumblr Account To A React App</title>
+    <!-- Microsoft Tiles -->
+    <meta name="application-name" content="Tumblr to React App" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
   </head>
+
   <body>
-    <noscript
-      >You literally NEED to enable JavaScript to run this app.</noscript
-    >
+    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
 </html>
