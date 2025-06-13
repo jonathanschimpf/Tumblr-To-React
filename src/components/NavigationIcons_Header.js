@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShuffle, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { Tooltip, OverlayTrigger } from "react-bootstrap";
 
-
 const NavigationIcons_Header = ({ onRandomSelect, onGoToBottom }) => {
   return (
     <div className="navigation-icons-header">
@@ -12,7 +11,11 @@ const NavigationIcons_Header = ({ onRandomSelect, onGoToBottom }) => {
         delay={{ show: 60, hide: 60 }}
         className="responsiveNavigationIcon"
         placement="top"
-        overlay={<Tooltip className="tooltip-inner-navigation-styles">Travel Back In Time</Tooltip>}
+        overlay={
+          <Tooltip className="tooltip-inner-navigation-styles">
+            Travel Back In Time
+          </Tooltip>
+        }
       >
         <FontAwesomeIcon
           icon={faArrowDown}
@@ -26,7 +29,11 @@ const NavigationIcons_Header = ({ onRandomSelect, onGoToBottom }) => {
         delay={{ show: 60, hide: 60 }}
         placement="top"
         className="responsiveNavigationIcon"
-        overlay={<Tooltip className="tooltip-inner-navigation-styles">Travel To A Random Photo</Tooltip>}
+        overlay={
+          <Tooltip className="tooltip-inner-navigation-styles">
+            Travel To A Random Photo
+          </Tooltip>
+        }
       >
         <FontAwesomeIcon
           icon={faShuffle}
