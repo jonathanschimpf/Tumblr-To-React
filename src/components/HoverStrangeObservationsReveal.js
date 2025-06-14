@@ -19,10 +19,12 @@ const HoverStrangeObservationsReveal = () => {
         <p className={`hover-name ${hovered ? "fade-out" : "fade-in"}`}>
           Jonathan Schimpf
         </p>
+
         <img
           src="/images/images-subdirectory_3/16174396485.jpg"
           alt="Strange Observations Title Image"
           className={`hover-image ${hovered ? "fade-in" : "fade-out"}`}
+          aria-hidden={!hovered}
         />
       </div>
     </div>
