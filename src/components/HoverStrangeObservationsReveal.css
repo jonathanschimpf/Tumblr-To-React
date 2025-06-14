@@ -1,0 +1,75 @@
+.hover-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* FIXED INTERACTION AREA */
+  cursor: pointer;
+  margin-bottom: 4rem;
+}
+
+.hover-inner {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+}
+
+.hover-name,
+.hover-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.4s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hover-name {
+  z-index: 2;
+  font-size: 48px;
+  font-weight: 700;
+  color: black;
+  white-space: nowrap;
+}
+
+.hover-image {
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+@media (max-width: 600px) {
+  .hover-wrapper {
+    height: 240px;
+    margin-bottom: 3rem;
+  }
+
+  .hover-name {
+    font-size: 8vw;
+  }
+}
+
+/* LEGIT HOVER EDGE CASE COMBAT */
+
+@media (hover: none) {
+  .hover-image {
+    display: none; /* HIDE THE IMAGE */
+  }
+
+  .hover-name {
+    opacity: 1; /* SHOW THE NAME */
+    transition: none;
+    pointer-events: none;
+  }
+}

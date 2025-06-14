@@ -1,8 +1,8 @@
 .photo-card {
   max-width: 600px;
-  margin: auto; /* Center the card */
-  padding-top: 5em;
-  margin-bottom: 10em;
+  margin: auto;
+  margin-bottom: 10em; /* This still handles space between cards */
+  padding-top: 25px;
 }
 
 .photo-card img {
@@ -52,9 +52,8 @@
   opacity: 1;
 }
 
-
 @media (max-width: 450px) {
-  .general-navigation-icon  {
+  .general-navigation-icon {
     font-size: 15px;
   }
 }

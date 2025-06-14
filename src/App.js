@@ -6,6 +6,7 @@ import TumblrToReact from "./components/TumblrToReact";
 import NavigationIconsHeader from "./components/NavigationIconsHeader";
 import FromTumblrToReactHeaderImg from "./components/FromTumblrToReactHeaderImg/FromTumblrToReactHeaderImg";
 import NavigationIconsFooter from "./components/NavigationIconsFooter";
+import HoverStrangeObservationsReveal from "./components/HoverStrangeObservationsReveal";
 
 function App() {
   const [data, setData] = useState([]);
@@ -56,7 +57,7 @@ function App() {
         onRandomSelect={scrollToRandom}
       />
       <FromTumblrToReactHeaderImg />
-      <p className="titleMyName">Jonathan Schimpf</p>
+      <HoverStrangeObservationsReveal />
       <TumblrToReact data={data} itemRefs={itemRefs} />
       <NavigationIconsFooter
         onGoToTop={scrollToTop}
