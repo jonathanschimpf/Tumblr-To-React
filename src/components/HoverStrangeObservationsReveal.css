@@ -4,8 +4,13 @@
   justify-content: center;
   align-items: center;
   height: 300px; /* FIXED INTERACTION AREA */
-  cursor: pointer;
+  cursor: default;
   margin-bottom: 4rem;
+}
+@media (hover: none) {
+  .hover-wrapper {
+    cursor: pointer; /* TAP INTERACTION AREA ON TOUCH */
+  }
 }
 
 .hover-inner {
@@ -63,13 +68,13 @@
 /* LEGIT HOVER EDGE CASE COMBAT */
 
 @media (hover: none) {
-  .hover-image {
-    display: none; /* HIDE THE IMAGE */
+  .hover-wrapper {
+    cursor: pointer;
   }
 
-  .hover-name {
-    opacity: 1; /* SHOW THE NAME */
+  .hover-name,
+  .hover-image {
     transition: none;
-    pointer-events: none;
+    /* DO NOT BLOCK pointer-events or force opacity here */
   }
 }
