@@ -3,21 +3,15 @@ import "./HoverStrangeObservationsReveal.css";
 
 const HoverStrangeObservationsReveal = () => {
   const [hovered, setHovered] = useState(false);
-  const isTouchDevice =
-    typeof window !== "undefined" && "ontouchstart" in window;
 
-  const toggleHover = () => {
-    if (isTouchDevice) {
-      setHovered((prev) => !prev);
-    }
-  };
+  const toggleHover = () => setHovered((prev) => !prev);
 
   return (
     <div
       className="hover-wrapper"
-      onMouseEnter={() => !isTouchDevice && setHovered(true)}
-      onMouseLeave={() => !isTouchDevice && setHovered(false)}
-      onClick={toggleHover} // SINGLE TAP = TOGGLE
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      onClick={toggleHover} // ✅ triggers on tap as well
     >
       <div className="hover-inner">
         <p className={`hover-name ${hovered ? "fade-out" : "fade-in"}`}>
@@ -26,8 +20,8 @@ const HoverStrangeObservationsReveal = () => {
         <img
           src="/images/images-subdirectory_3/16174396485.jpg"
           alt=""
-          role="presentation"
           className={`hover-image ${hovered ? "fade-in" : "fade-out"}`}
+          aria-hidden={!hovered}
         />
       </div>
     </div>
