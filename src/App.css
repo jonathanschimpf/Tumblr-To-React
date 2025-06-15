@@ -17,3 +17,7 @@
     font-size: 8.3vw;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}

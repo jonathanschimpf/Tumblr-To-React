@@ -6,7 +6,15 @@
   height: 300px;
   cursor: default;
   margin-bottom: 4rem;
-  overflow: hidden; /* PREVENT OVERFLOW GLITCH */
+  overflow: hidden;
+
+  /* FIX HAIRLINE ON iOS + SAFARI BORDER RENDER BUG */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+  /* TRIGGER GPU COMPOSITE LAYER (FOR SMOOTHER RENDERING) */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 
 .hover-inner {
@@ -43,7 +51,8 @@
   width: 100%;
   height: auto;
   max-width: 600px;
-  border-radius: 12px; /* MILD ROUNDING MATCHING THEME */
+  border-radius: inherit; /* ✅ JUST USE INHERIT */
+  display: block; /* 🚫 FIXES SPACING FROM INLINE DEFAULT */
 }
 
 .fade-in {
