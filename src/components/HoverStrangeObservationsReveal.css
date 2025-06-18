@@ -52,6 +52,7 @@
   height: auto;
   max-width: 600px;
   border-radius: inherit; /* ✅ JUST USE INHERIT */
+  border-radius: 5px; /* ADDED THIS FOR STYLE BUT REMOVE IT IF THE LINE COMES BACK ON THE BOTTOM OF TLP SO EASTER EGG */
   display: block; /* 🚫 FIXES SPACING FROM INLINE DEFAULT */
 }
 
